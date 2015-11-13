@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.params=texto
+comment0.target=int\ obtenerIndicePatronURL(java.lang.String)
+comment0.text=\n\ Comprobar\ si\ existe\ alg\u00FAn\ patr\u00F3n\ de\ direcci\u00F3n\ url\ en\ un\ texto.\n\ \n\ @param\ texto\ Cadena\ a\ comprobar\ si\ es\ una\ direcci\u00F3n\ url.\n\ @return\ Indice\ con\ la\ menor\ posici\u00F3n\ de\ un\ patr\u00F3n\ url\ en\ el\ texto.\n
+comment1.params=texto
+comment1.target=java.lang.String\ extraerURL(java.lang.String)
+comment1.text=\n\ M\u00E9todo\ que\ extrae\ una\ direcci\u00F3n\ url\ de\ un\ texto.\n\ \n\ @param\ texto\ Texto\ a\ extraer\ la\ direcci\u00F3n\ url\ que\ pueda\ contener\n\ @return\ Direcci\u00F3n\ url\ extra\u00EDda\ o\ null.\n
+comment2.params=urlFuente\ youtube
+comment2.target=edu.duke.StorageResource\ obtenerDireccionesURL(java.lang.String,\ boolean)
+comment2.text=\n\ Obtener\ todas\ las\ direcciones\ existentes\ en\ una\ p\u00E1gina\ web.\n\ \n\ @param\ urlFuente\ Direcci\u00F3n\ url\ de\ la\ web\ a\ obtener\ los\ datos.\n\ @param\ youtube\ Flag\ para\ extraer\ s\u00F3lo\ direcciones\ a\ youtube\ o\ no.\n\ @return\ Todas\ las\ direcciones\ almacenadas\ en\ un\ objeto\ StorageResource.\n
+comment3.params=url
+comment3.target=edu.duke.StorageResource\ obtenerEnlacesURL(java.lang.String)
+comment3.text=\n\ Obtener\ todas\ las\ direcciones\ de\ enlaces\ <a>\ existentes\ en\ una\ p\u00E1gina\ web.\n\ \n\ @param\ url\ Direcci\u00F3n\ url\ de\ la\ web\ a\ obtener\ los\ datos.\n\ @return\ Todas\ las\ direcciones\ almacenadas\ en\ un\ objeto\ StorageResource.\n
+comment4.params=youtube
+comment4.target=void\ probar1(boolean)
+comment5.params=
+comment5.target=void\ probarExamenFinal()
+numComments=6
