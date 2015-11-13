@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.params=csvPaises\ paisBuscar
+comment0.target=java.lang.String\ infoPais(org.apache.commons.csv.CSVParser,\ java.lang.String)
+comment0.text=\n\ Obtener\ la\ informaci\u00F3n\ de\ un\ pa\u00EDs\ concreto.\n\ \n\ @param\ csvPaises\ Lista\ de\ paises\ en\ formato\ csv.\n\ @param\ paisBuscar\ Cadena\ con\ el\ nombre\ del\ pa\u00EDs\ a\ buscar.\n\ @return\ Cadena\ con\ la\ informaci\u00F3n\ del\ pa\u00EDs\ si\ se\ encuentra,\ o\ "NOT\ FOUND"\ en\ caso\ contrario.\n
+comment1.params=csvPaises\ producto1\ producto2
+comment1.target=void\ listaExportadoresDosProductos(org.apache.commons.csv.CSVParser,\ java.lang.String,\ java.lang.String)
+comment1.text=\n\ Mostrar\ los\ pa\u00EDses\ que\ exportan\ dos\ productos.\n\ \n\ @param\ csvPaises\ Lista\ de\ paises\ en\ formato\ csv.\n\ @param\ producto1\ Primer\ producto\ a\ comprobar\ si\ es\ exportado.\n\ @param\ producto2\ Segundo\ producto\ a\ comprobar\ si\ es\ exportado.\n
+comment2.params=csvPaises\ producto
+comment2.target=int\ numeroExportadores(org.apache.commons.csv.CSVParser,\ java.lang.String)
+comment2.text=\n\ Obtener\ el\ n\u00FAmero\ de\ pa\u00EDses\ exportadores\ de\ un\ producto.\n\ \n\ @param\ csvPaises\ Lista\ de\ pa\u00EDses\ en\ formato\ csv.\n\ @param\ producto\ Producto\ a\ comprobar\ cu\u00E1ntos\ pa\u00EDses\ lo\ exportan.\n\ @return\ N\u00FAmero\ de\ pa\u00EDses\ exportadores.\n
+comment3.params=csvPaises\ valorComp
+comment3.target=void\ grandesExportadores(org.apache.commons.csv.CSVParser,\ java.lang.String)
+comment3.text=\n\ Mostrar\ por\ pantalla\ los\ pa\u00EDses\ (y\ sus\ valores)\ cuyos\ valores\ en\ exportaciones\ tiene\n\ m\u00E1s\ d\u00EDgitos\ que\ un\ valor\ concreto.\n\ \n\ @param\ csvPaises\ Lista\ de\ pa\u00EDses\ en\ formato\ csv.\n\ @param\ valor\ M\u00EDnimo\ valor\ en\ d\u00F3lares\ a\ comparar\ su\ longitud.\n
+comment4.params=pais\ producto1\ producto2\ valor
+comment4.target=void\ probar(java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String)
+comment4.text=\n\ Probar\ las\ funciones\ de\ la\ pr\u00E1ctica.\n\ \n
+numComments=5

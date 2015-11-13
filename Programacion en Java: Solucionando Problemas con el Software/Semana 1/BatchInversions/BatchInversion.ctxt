@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=imgEntrada
+comment0.target=edu.duke.ImageResource\ makeInversion(edu.duke.ImageResource)
+comment0.text=\n\ Convierte\ una\ imagen\ a\ negativo.\n\ \n\ @param\ img\ Imagen\ a\ convertir\ a\ negativo.\n\ @return\ Imagen\ transformada\ a\ negativo.\ \n
+comment1.params=
+comment1.target=void\ selectAndConvert()
+comment1.text=\n\ Selecciona\ una\ serie\ de\ im\u00E1genes\ para\ convertirlas\ a\ negativo.\n\ \n\ @param\ img\ Imagen\ a\ convertir\ a\ negativo.\n\ @return\ Imagen\ transformada\ a\ negativo.\ \n
+numComments=2
