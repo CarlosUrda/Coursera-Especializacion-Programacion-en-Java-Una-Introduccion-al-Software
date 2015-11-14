@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.params=ch
+comment0.target=boolean\ isVowel(char)
+comment0.text=\n\ Comprobar\ si\ un\ car\u00E1cter\ es\ una\ vocal\ (may\u00FAsculas\ o\ min\u00FAsculas)\n\ \n\ @param\ ch\ Car\u00E1cter\ a\ comprobar\n\ @return\ True\ o\ False\ si\ es\ una\ vocal\ o\ no.\n
+comment1.params=ch
+comment1.target=void\ testIsVowel(char)
+numComments=2
