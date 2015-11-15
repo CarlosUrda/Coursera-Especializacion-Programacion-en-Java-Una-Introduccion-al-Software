@@ -1,11 +1,11 @@
 import edu.duke.FileResource;
-
+import java.util.Arrays;
 
 /**
  * Ejercicio 3 de la Semana 1 del curso «Programacion en Java: Arrays, Listas y Estructuras de Datos».
  * 
  * @author Carlos A. Gómez Urda
- * @version 1.0
+ * @version 1.1
  */
 public class WordLengths
 {
@@ -95,13 +95,16 @@ public class WordLengths
     {        
         if (counts == null || counts.length == 0) return -1;
      
+        Arrays.fill( counts, 0);
         int longitudMax = counts.length;
         
         for (String palabra : resource.words())
         {
-            palabra = trimLetras( palabra); 
+            palabra = trimLetras( palabra, 1); 
             
             int longitud = palabra.length();
+            if (longitud == 0) continue;
+            
             int indiceLong = (longitud > longitudMax) ? longitudMax-1 : longitud-1;
             
             counts[indiceLong]++;
