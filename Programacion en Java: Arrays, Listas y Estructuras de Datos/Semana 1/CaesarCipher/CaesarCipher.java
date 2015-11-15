@@ -18,7 +18,8 @@ public class CaesarCipher extends Caesar
     {
         if (input == null) return null;
         
-        key %= alpha.length();
+        key = key % alpha.length();
+        if (key < 0) key += alpha.length();
         
         String alfaFin = alpha.substring( key) + alpha.substring( 0, key);
         
@@ -55,8 +56,11 @@ public class CaesarCipher extends Caesar
     {
         if (input == null) return null;
         
-        key1 %= alpha.length();
-        key2 %= alpha.length();
+        key1 = key1 % alpha.length();
+        if (key1 < 0) key1 += alpha.length();
+
+        key2 = key2 % alpha.length();
+        if (key2 < 0) key2 += alpha.length();
         
         String alfaFin1 = alpha.substring( key1) + alpha.substring( 0, key1);
         String alfaFin2 = alpha.substring( key2) + alpha.substring( 0, key2);
