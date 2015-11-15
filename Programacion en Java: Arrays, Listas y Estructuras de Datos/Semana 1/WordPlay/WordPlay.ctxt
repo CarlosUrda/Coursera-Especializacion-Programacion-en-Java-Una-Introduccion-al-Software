@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.params=ch
+comment0.target=boolean\ isVowel(char)
+comment0.text=\n\ Comprobar\ si\ un\ car\u00E1cter\ es\ una\ vocal\ (may\u00FAsculas\ o\ min\u00FAsculas)\n\ \n\ @param\ ch\ Car\u00E1cter\ a\ comprobar\n\ @return\ True\ o\ False\ si\ es\ una\ vocal\ o\ no.\n
+comment1.params=phrase\ ch
+comment1.target=java.lang.String\ replaceVowels(java.lang.String,\ char)
+comment1.text=\n\ Sustituir\ las\ vocales\ de\ una\ cadena\ por\ un\ car\u00E1cter\ determinado.\n\ \n\ @param\ phrase\ Cadena\ en\ la\ cual\ realizar\ la\ sustituci\u00F3n.\n\ @param\ ch\ Car\u00E1cter\ a\ sustituir.\n\ @return\ Cadena\ con\ las\ vocales\ sustituidas.\ Null\ si\ hay\ alg\u00FAn\ error.\n
+comment2.params=phrase\ ch
+comment2.target=java.lang.String\ emphasize(java.lang.String,\ char)
+comment2.text=\n\ Sustituir\ en\ una\ cadena\ un\ car\u00E1cter\ determinado\ por\ '*'\ si\ est\u00E1\ en\ posici\u00F3n\ impar\ o\ '+'\ si\n\ est\u00E1\ en\ posici\u00F3n\ par.\n\ \n\ @param\ phrase\ Cadena\ en\ la\ cual\ realizar\ la\ sustituci\u00F3n.\n\ @param\ ch\ Car\u00E1cter\ a\ sustituir\ (ya\ est\u00E9\ en\ mayus\ o\ minus).\n\ @return\ Cadena\ con\ las\ vocales\ sustituidas.\ Null\ si\ hay\ alg\u00FAn\ error.\n
+comment3.params=ch
+comment3.target=void\ testIsVowel(char)
+comment3.text=\n\ Probar\ la\ funci\u00F3n\ isVowel\n\ \n\ @param\ ch\ Car\u00E1cter\ a\ comprobar\n
+comment4.params=cadena\ ch
+comment4.target=void\ testReplaceVowel(java.lang.String,\ char)
+comment4.text=\n\ Probar\ la\ funci\u00F3n\ replaceVowels\n\ \n\ @param\ cadena\ Cadena\ a\ sustituir\ las\ vocales\ por\ un\ car\u00E1cter\n\ @param\ ch\ Car\u00E1cter\ a\ sustituir.\n
+comment5.params=cadena\ ch
+comment5.target=void\ testEmphasize(java.lang.String,\ char)
+comment5.text=\n\ Probar\ la\ funci\u00F3n\ emphasize.\n\ \n\ @param\ phrase\ Cadena\ en\ la\ cual\ realizar\ la\ sustituci\u00F3n.\n\ @param\ ch\ Car\u00E1cter\ a\ sustituir\ (ya\ est\u00E9\ en\ mayus\ o\ minus).\n
+numComments=6

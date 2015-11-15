@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.params=encrypted
+comment0.target=java.lang.String\ decrypt(java.lang.String)
+comment0.text=\n\ Desencriptar\ un\ texto\ encriptado\ mediante\ el\ m\u00E9todo\ de\ cifrado\ del\ C\u00E9sar.\n\ \n\ @param\ encrypted\ Texto\ a\ desencriptar.\n\ @return\ Cadena\ de\ texto\ desencriptada.\ Null\ si\ hay\ alg\u00FAn\ error.\n
+comment1.params=encrypted
+comment1.target=java.lang.String\ decryptTwoKeys(java.lang.String)
+comment1.text=\n\ Desencriptar\ un\ texto\ encriptado\ mediante\ el\ m\u00E9todo\ de\ cifrado\ del\ C\u00E9sar\ con\ dos\ claves.\n\ \n\ @param\ encrypted\ Texto\ a\ desencriptar.\n\ @return\ Cadena\ de\ texto\ desencriptada.\ Null\ si\ hay\ alg\u00FAn\ error.\n
+comment2.params=
+comment2.target=void\ testDecrypt()
+comment2.text=\n\ Probar\ la\ funci\u00F3n\ decrypt.\n
+comment3.params=
+comment3.target=void\ testHalfOfString()
+comment3.text=\n\ Probar\ la\ funci\u00F3n\ halfOfString.\n
+comment4.params=
+comment4.target=void\ testDecryptTwoKeys()
+comment4.text=\n\ Probar\ la\ funci\u00F3n\ decryptTwoKeys.\n
+numComments=5

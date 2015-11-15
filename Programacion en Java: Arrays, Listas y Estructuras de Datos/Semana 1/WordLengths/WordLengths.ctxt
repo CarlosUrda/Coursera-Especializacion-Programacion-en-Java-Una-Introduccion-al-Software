@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.params=cadena\ caracteres
+comment0.target=java.lang.String\ trimLetras(java.lang.String,\ int)
+comment0.text=\n\ Funci\u00F3n\ para\ eliminar\ los\ caracteres\ que\ no\ son\ letras\ del\ principio\ y\ final\ de\ una\ palabra.\n\ \n\ @param\ cadena\ Cadena\ a\ eliminar\ los\ caracteres\ al\ principio\ y\ final.\n\ @param\ caracteres\ N\u00FAmero\ de\ caracteres\ a\ comprobar\ para\ eliminar\ por\ el\ principio\ y\ el\ final.\n\ Si\ es\ <\=\ 0\ no\ comprueba\ nada.\ Si\ es\ >\=\ longitud\ comprueba\ todos\ los\ caracteres\ hasta\ que\ \n\ encuentra\ una\ letra.\n\ @return\ Cadena\ con\ los\ caracteres\ eliminados.\n
+comment1.params=cadena
+comment1.target=java.lang.String\ trimLetras(java.lang.String)
+comment1.text=\n\ Funci\u00F3n\ para\ eliminar\ los\ caracteres\ que\ no\ son\ letras\ del\ principio\ y\ final\ de\ una\ palabra.\n\ \n\ @param\ cadena\ Cadena\ a\ eliminar\ los\ caracteres.\n\ @return\ Cadena\ con\ los\ caracteres\ eliminados.\n
+comment2.params=values
+comment2.target=int\ indexOfMax(int[])
+comment2.text=\n\ Obtener\ el\ indice\ del\ elemento\ con\ mayor\ valor\ del\ array.\n\ \n\ @param\ values\ Array\ donde\ encontrar\ el\ elemento\ de\ mayor\ valor.\n\ @return\ \u00CDndice\ del\ elemento\ con\ el\ m\u00E1ximo\ valor\ del\ array.\n
+comment3.params=resource\ counts
+comment3.target=int\ countWordsLengths(edu.duke.FileResource,\ int[])
+comment3.text=\n\ Contar\ el\ n\u00FAmero\ de\ palabras\ de\ cada\ longitud\ para\ todas\ las\ palabras\ de\ un\ archivo.\n\ Las\ longitudes\ a\ contar\ van\ desde\ 1\ hasta\ la\ longitud\ del\ array\ pasado.\ Las\ palabras\n\ con\ m\u00E1s\ caracteres\ que\ la\ longitud\ del\ array\ se\ consideran\ en\ el\ recuento\ como\ tama\u00F1o\ \n\ longitud\ del\ array.\n\ \n\ @param\ resource\ Archivo\ de\ donde\ leer\ las\ palabras.\n\ @param\ counts\ N\u00FAmero\ de\ palabras\ de\ cada\ longitud.\ El\ \u00EDndice\ de\ cada\ longitud\ viene\n\ dado\ por\ longitudPalabra-1\ \=>\ \u00CDndices\:\ [0,\ 1,\ 2,\ ...,\ longitudArray\ -1]\n\ @return\ 1\ Correcto;\ -1\ Error.\n
+comment4.params=
+comment4.target=void\ testCountWordsLengths()
+comment4.text=\n\ Probar\ la\ funci\u00F3n\ countWordsLengths.\n
+numComments=5

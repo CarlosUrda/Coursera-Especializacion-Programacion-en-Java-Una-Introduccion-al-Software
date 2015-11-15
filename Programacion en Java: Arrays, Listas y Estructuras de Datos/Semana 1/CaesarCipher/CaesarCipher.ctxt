@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.params=key
+comment0.target=CaesarCipher(int)
+comment0.text=\n\ Constructor\n\ \n\ @param\ key\ Clave\ a\ usar\ en\ la\ encriptaci\u00F3n.\n
+comment1.params=input
+comment1.target=java.lang.String\ encrypt(java.lang.String)
+comment1.text=\n\ Cifrar\ una\ cadena\ usando\ el\ m\u00E9todo\ \u00ABCifrado\ del\ C\u00E9sar\u00BB\ a\ partir\ de\ la\ clave\ asignada\ al\ crear\n\ el\ objeto.\n\ \n\ @param\ input\ Cadena\ a\ cifrar.\n\ @return\ Cadena\ encriptada.\n
+comment2.params=encrypted
+comment2.target=java.lang.String\ decrypt(java.lang.String)
+comment2.text=\n\ Desencriptar\ una\ cadena\ cifrada\ usando\ el\ m\u00E9todo\ \u00ABCifrado\ del\ C\u00E9sar\u00BB\ a\ partir\ de\ la\ clave\n\ asignada\ al\ objeto.\n\ \n\ @param\ input\ Cadena\ encriptada.\n\ @return\ Cadena\ desencriptada.\n
+numComments=3
