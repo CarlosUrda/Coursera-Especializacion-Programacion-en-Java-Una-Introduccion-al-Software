@@ -1,14 +1,11 @@
 #BlueJ class context
-comment0.params=input\ key
-comment0.target=java.lang.String\ encrypt(java.lang.String,\ int)
-comment0.text=\n\ Cifrar\ una\ cadena\ usando\ el\ m\u00E9todo\ \u00ABCifrado\ del\ C\u00E9sar\u00BB.\n\ \n\ @param\ input\ Cadena\ a\ cifrar.\n\ @param\ key\ Clave\ a\ usar\ en\ el\ cifrado.\n
-comment1.params=input\ key1\ key2
-comment1.target=java.lang.String\ encryptTwoKeys(java.lang.String,\ int,\ int)
-comment1.text=\n\ Cifrar\ una\ cadena\ usando\ una\ variaci\u00F3n\ del\ m\u00E9todo\ \u00ABCifrado\ del\ C\u00E9sar\u00BB.\n\ \n\ @param\ input\ Cadena\ a\ cifrar.\n\ @param\ key1\ Clave\ a\ usar\ en\ el\ cifrado\ para\ las\ letras\ impares.\n\ @param\ key2\ Clave\ a\ usar\ en\ el\ cifrado\ para\ las\ letras\ pares.\n
-comment2.params=key
-comment2.target=void\ testEncrypt(int)
-comment2.text=\n\ Probar\ la\ funci\u00F3n\ encrypt.\n\ \n\ @param\ key\ Clave\ a\ usar\ en\ el\ cifrado.\n
-comment3.params=key1\ key2
-comment3.target=void\ testEncryptTwoKeys(int,\ int)
-comment3.text=\n\ Probar\ la\ funci\u00F3n\ encryptTwoKeys.\n\ \n\ @param\ key\ Clave\ a\ usar\ en\ el\ cifrado.\n
-numComments=4
+comment0.params=key
+comment0.target=CaesarCipher(int)
+comment0.text=\n\ Constructor\n\ \n\ @param\ key\ Clave\ a\ usar\ en\ la\ encriptaci\u00F3n.\n
+comment1.params=input
+comment1.target=java.lang.String\ encrypt(java.lang.String)
+comment1.text=\n\ Cifrar\ una\ cadena\ usando\ el\ m\u00E9todo\ \u00ABCifrado\ del\ C\u00E9sar\u00BB\ a\ partir\ de\ la\ clave\ asignada\ al\ crear\n\ el\ objeto.\n\ \n\ @param\ input\ Cadena\ a\ cifrar.\n\ @return\ Cadena\ encriptada.\n
+comment2.params=encrypted
+comment2.target=java.lang.String\ decrypt(java.lang.String)
+comment2.text=\n\ Desencriptar\ una\ cadena\ cifrada\ usando\ el\ m\u00E9todo\ \u00ABCifrado\ del\ C\u00E9sar\u00BB\ a\ partir\ de\ la\ clave\n\ asignada\ al\ objeto.\n\ \n\ @param\ input\ Cadena\ encriptada.\n\ @return\ Cadena\ desencriptada.\n
+numComments=3

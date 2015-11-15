@@ -1,2 +1,20 @@
 #BlueJ class context
-numComments=0
+comment0.params=chFreq
+comment0.target=void\ setChFreq(char)
+comment0.text=\n\ Cambiar\ la\ letra\ m\u00E1s\ frecuente\ del\ alfabeto.\n\ \n\ @param\ chFreq\ Nueva\ letra\ m\u00E1s\ frecuente\ en\ el\ alfabeto.\ Tiene\ que\ ser\ una\ de\ las\ letras\n\ presentes\ en\ el\ alfabeto.\n
+comment1.params=
+comment1.target=char\ getChFreq()
+comment1.text=\n\ Obtener\ la\ letra\ m\u00E1s\ frecuente\ del\ alfabeto.\n\ \n\ @return\ Letra\ establecida\ como\ m\u00E1s\ frecuente\ en\ el\ alfabeto.\n
+comment2.params=encrypted
+comment2.target=int\ getKey(java.lang.String)
+comment2.text=\n\ Obtener\ la\ clave\ usada\ para\ encriptar\ un\ texto.\n\ \n\ @param\ encrypted\ Texto\ encriptado.\n\ @return\ Clave\ usada\ para\ la\ encriptar\ el\ texto.\n
+comment3.params=values
+comment3.target=int\ maxIndex(int[])
+comment3.text=\n\ Obtener\ el\ indice\ del\ elemento\ con\ mayor\ valor\ del\ array.\n\ \n\ @param\ values\ Array\ donde\ encontrar\ el\ elemento\ de\ mayor\ valor.\n\ @return\ \u00CDndice\ del\ elemento\ con\ el\ m\u00E1ximo\ valor\ del\ array.\n
+comment4.params=input\ counts
+comment4.target=int\ countLetters(java.lang.String,\ int[])
+comment4.text=\n\ Contar\ el\ n\u00FAmero\ de\ letras\ del\ alfabeto\ en\ una\ cadena.\n\ \n\ @param\ input\ Cadena\ a\ contar\ el\ n\u00FAmero\ de\ letras..\n\ @param\ counts\ N\u00FAmero\ de\ palabras\ de\ cada\ longitud.\ El\ \u00EDndice\ de\ cada\ longitud\ viene\n\ dado\ por\ longitudPalabra-1\ \=>\ \u00CDndices\:\ [0,\ 1,\ 2,\ ...,\ longitudArray\ -1]\n\ @return\ 1\ Correcto;\ -1\ Error.\n
+comment5.params=message\ start
+comment5.target=java.lang.String\ halfOfString(java.lang.String,\ int)
+comment5.text=\n\ Obtener\ una\ cadena\ con\ los\ caracteres\ alternos\ a\ partir\ de\ una\ posici\u00F3n\ inicial.\n\ \n\ @param\ message\ Cadena\ de\ la\ cual\ obtener\ la\ nueva\ cadena.\n\ @param\ start\ \u00CDndice\ inicial\ en\ la\ cadena\ a\ partir\ del\ cual\ empezar\ a\ obtener\ caracteres\ \n\ alternos.\n\ @return\ Cadena\ con\ los\ caracteres\ alternos\ de\ la\ cadena\ original.\ Null\ si\ hay\ alg\u00FAn\ error.\n
+numComments=6
