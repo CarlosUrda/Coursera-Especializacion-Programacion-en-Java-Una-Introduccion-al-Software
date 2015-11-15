@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.params=chFreq
+comment0.target=void\ setChFreq(char)
+comment0.text=\n\ Cambiar\ la\ letra\ m\u00E1s\ frecuente\ del\ alfabeto.\n\ \n\ @param\ chFreq\ Nueva\ letra\ m\u00E1s\ frecuente\ en\ el\ alfabeto.\ Tiene\ que\ ser\ una\ de\ las\ letras\n\ presentes\ en\ el\ alfabeto.\n
+comment1.params=
+comment1.target=char\ getChFreq()
+comment1.text=\n\ Obtener\ la\ letra\ m\u00E1s\ frecuente\ del\ alfabeto.\n\ \n\ @return\ Letra\ establecida\ como\ m\u00E1s\ frecuente\ en\ el\ alfabeto.\n
+comment2.params=encrypted
+comment2.target=int\ getKey(java.lang.String)
+comment2.text=\n\ Obtener\ la\ clave\ usada\ para\ encriptar\ un\ texto.\n\ \n\ @param\ encrypted\ Texto\ encriptado.\n\ @return\ Clave\ usada\ para\ la\ encriptar\ el\ texto.\n
+comment3.params=encrypted
+comment3.target=java.lang.String\ decrypt(java.lang.String)
+comment3.text=\n\ Desencriptar\ un\ texto\ encriptado\ mediante\ el\ m\u00E9todo\ de\ cifrado\ del\ C\u00E9sar.\n\ \n\ @param\ encrypted\ Texto\ a\ desencriptar.\n\ @param\ chFreq\ Letra\ m\u00E1s\ frecuente\ en\ el\ alfabeto.\n\ @return\ Cadena\ de\ texto\ desencriptada.\ Null\ si\ hay\ alg\u00FAn\ error.\n
+comment4.params=
+comment4.target=void\ testDecrypt()
+comment4.text=\n\ Probar\ la\ funci\u00F3n\ countWordsLengths.\n
+numComments=5

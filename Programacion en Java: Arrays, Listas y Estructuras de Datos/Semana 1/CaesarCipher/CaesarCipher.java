@@ -4,9 +4,9 @@ import edu.duke.FileResource;
  * Ejercicio 2 de la Semana 1 del curso «Programacion en Java: Arrays, Listas y Estructuras de Datos».
  * 
  * @author Carlos A. Gómez Urda
- * @version 1.0
+ * @version 1.1
  */
-public class CaesarCipher
+public class CaesarCipher extends Caesar
 {
     /**
      * Cifrar una cadena usando el método «Cifrado del César».
@@ -14,14 +14,13 @@ public class CaesarCipher
      * @param input Cadena a cifrar.
      * @param key Clave a usar en el cifrado.
      */
-    private String encrypt( String input, int key)
+    public String encrypt( String input, int key)
     {
         if (input == null) return null;
         
-        String alfaIni = "abcdefghijklmnopqrstuvwxyz";
-        key %= alfaIni.length();
+        key %= alpha.length();
         
-        String alfaFin = alfaIni.substring( key) + alfaIni.substring( 0, key);
+        String alfaFin = alpha.substring( key) + alpha.substring( 0, key);
         
         StringBuilder cadena = new StringBuilder( input);
         int longitud = cadena.length();
@@ -31,7 +30,7 @@ public class CaesarCipher
             char ch = cadena.charAt( i);
             boolean esMinusculas = Character.isLowerCase( ch);
 
-            int indice = alfaIni.indexOf( Character.toLowerCase( ch));
+            int indice = alpha.indexOf( Character.toLowerCase( ch));
             if (indice == -1) continue;
             
             ch = alfaFin.charAt( indice);
@@ -52,16 +51,15 @@ public class CaesarCipher
      * @param key1 Clave a usar en el cifrado para las letras impares.
      * @param key2 Clave a usar en el cifrado para las letras pares.
      */
-    private String encryptTwoKeys( String input, int key1, int key2)
+    public String encryptTwoKeys( String input, int key1, int key2)
     {
         if (input == null) return null;
         
-        String alfaIni = "abcdefghijklmnopqrstuvwxyz";
-        key1 %= alfaIni.length();
-        key2 %= alfaIni.length();
+        key1 %= alpha.length();
+        key2 %= alpha.length();
         
-        String alfaFin1 = alfaIni.substring( key1) + alfaIni.substring( 0, key1);
-        String alfaFin2 = alfaIni.substring( key2) + alfaIni.substring( 0, key2);
+        String alfaFin1 = alpha.substring( key1) + alpha.substring( 0, key1);
+        String alfaFin2 = alpha.substring( key2) + alpha.substring( 0, key2);
         
         StringBuilder cadena = new StringBuilder( input);
         int longitud = cadena.length();
@@ -71,7 +69,7 @@ public class CaesarCipher
             char ch = cadena.charAt( i);
             boolean esMinusculas = Character.isLowerCase( ch);
 
-            int indice = alfaIni.indexOf( Character.toLowerCase( ch));
+            int indice = alpha.indexOf( Character.toLowerCase( ch));
             if (indice == -1) continue;
 
             ch = (i % 2 == 0) ? alfaFin1.charAt( indice) : alfaFin2.charAt( indice);
