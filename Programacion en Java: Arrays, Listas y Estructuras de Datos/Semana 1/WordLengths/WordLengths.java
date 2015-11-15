@@ -35,6 +35,8 @@ public class WordLengths
             indiceIni = i+1;
         }
 
+        if (indiceIni == longitud) return "";
+        
         int limite = longitud-1-caracteres;
         for (int i = longitud-1; i > limite; --i)
         {
