@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=encrypted
+comment0.target=java.lang.String\ breakCaesarCipher(java.lang.String)
+comment0.text=\n\ Desencriptar\ un\ texto\ encriptado\ mediante\ el\ m\u00E9todo\ de\ cifrado\ del\ C\u00E9sar\ con\ dos\ claves.\n\ \n\ @param\ encrypted\ Texto\ a\ desencriptar.\n\ @return\ Cadena\ de\ texto\ desencriptada.\ Null\ si\ hay\ alg\u00FAn\ error.\n
+comment1.params=key1\ key2
+comment1.target=void\ simpleTests(int,\ int)
+comment1.text=\n\ Probar\ la\ funci\u00F3n\ encrypt.\n
+numComments=2
