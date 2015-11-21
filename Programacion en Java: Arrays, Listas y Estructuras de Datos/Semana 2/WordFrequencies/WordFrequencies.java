@@ -15,6 +15,12 @@ public class WordFrequencies
     private ArrayList<String> myWords;
     private ArrayList<Integer> myFreqs;
     
+    private String signos = ":,.\"";
+    
+    
+    /**
+     * Constructor
+     */
     public WordFrequencies()
     {
         myWords = new ArrayList<String>();
@@ -23,6 +29,32 @@ public class WordFrequencies
     
     
     /**
+     * Eliminar todos los caracteres que son signos de puntuación al principio y al final.
+     * 
+     * @param palabra Palabra a eliminar sus signos
+     */
+    private String eliminarSignos( String palabra)
+    {
+        if (palabra == null) return null;
+        
+        palabra = palabra.replaceAll( "[" + signos + "]", " ");
+        return palabra.trim();
+    }
+    
+    
+    /**
+     * Obtener la palabra situada internamente en un índice.
+     * 
+     * @param i Índice donde está situada la palabra
+     * @return Palabra situada en el índice.
+     */
+    public String getWord( int i)
+    {
+        return myWords.get( i);
+    }
+    
+        
+    /**
      * Encontrar las palabras distintas en un archivo y obtener el número de veces que 
      * aparece cada una.
      * 
@@ -30,9 +62,79 @@ public class WordFrequencies
      * los signos se extraen para contar la palabra. Si es false los signos se dejan y se cuenta como
      * una palabra distinta.
      */
-    public void findUnique( boolean quitarSignos)
+    public void findUnique( boolean sinSignos)
     {
+        FileResource archivo = new FileResource();
+        int indice;
+        int freq;
         
+        myWords.clear();
+        myFreqs.clear();
+
+        for (String palabra : archivo.words())
+        {
+            palabra = palabra.toLowerCase();
+            
+            if (sinSignos)
+                palabra = eliminarSignos( palabra);
+            
+            if (myWords.contains( palabra))
+            {
+                indice = myWords.indexOf( palabra);
+                freq = myFreqs.get( indice) + 1;
+                myFreqs.set( indice, freq);
+            }
+            else
+            {
+                myWords.add( palabra);
+                myFreqs.add( 1);
+            }
+        }
+             
+    }
+    
+    
+    /**
+     * Obtener el índice de la palabra más frecuente obtenida anteriormente.
+     * 
+     * @return Índice de la palabra más frecuente. -1 si no hay ninguna palabra.
+     */
+    public int findIndexMax()
+    {
+        int palabras = myFreqs.size();
+        int maxIndice = -1;
+        int maxFreq = 0;
         
+        for (int i = 0; i < palabras; i++)
+        {
+            int freq = myFreqs.get( i);
+
+            if (freq <= maxFreq) continue;
+            
+            maxIndice = i;
+            maxFreq = freq;                
+        }
+        
+        return maxIndice;
+    }
+    
+    
+    /**
+     * Probador de las funciones findUnique y findIndexMax.
+     */
+    public void tester()
+    {
+        findUnique( false);
+        
+        int palabras = myWords.size();
+        int indiceMax = findIndexMax();
+
+        System.out.println( "El número de palabras distintas son: " + palabras);
+        
+        for (int i = 0; i < palabras; ++i)
+            System.out.println( myFreqs.get( i) + ": " + myWords.get( i));
+            
+        System.out.println( "La palabra más frecuente es => " + myWords.get( indiceMax) + ": " + 
+                            myFreqs.get( indiceMax));                
     }
 }

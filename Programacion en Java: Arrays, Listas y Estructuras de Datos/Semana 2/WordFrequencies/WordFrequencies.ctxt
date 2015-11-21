@@ -1,4 +1,20 @@
 #BlueJ class context
 comment0.params=
 comment0.target=WordFrequencies()
-numComments=1
+comment0.text=\n\ Constructor\n
+comment1.params=palabra
+comment1.target=java.lang.String\ eliminarSignos(java.lang.String)
+comment1.text=\n\ Eliminar\ todos\ los\ caracteres\ que\ son\ signos\ de\ puntuaci\u00F3n\ al\ principio\ y\ al\ final.\n\ \n\ @param\ palabra\ Palabra\ a\ eliminar\ sus\ signos\n
+comment2.params=i
+comment2.target=java.lang.String\ getWord(int)
+comment2.text=\n\ Obtener\ la\ palabra\ situada\ internamente\ en\ un\ \u00EDndice.\n\ \n\ @param\ i\ \u00CDndice\ donde\ est\u00E1\ situada\ la\ palabra\n\ @return\ Palabra\ situada\ en\ el\ \u00EDndice.\n
+comment3.params=sinSignos
+comment3.target=void\ findUnique(boolean)
+comment3.text=\n\ Encontrar\ las\ palabras\ distintas\ en\ un\ archivo\ y\ obtener\ el\ n\u00FAmero\ de\ veces\ que\ \n\ aparece\ cada\ una.\n\ \n\ @param\ sinSignos\ Indica\ si\ se\ deben\ tener\ en\ cuenta\ los\ signos\ junto\ a\ una\ palabra.\ Si\ es\ true\n\ los\ signos\ se\ extraen\ para\ contar\ la\ palabra.\ Si\ es\ false\ los\ signos\ se\ dejan\ y\ se\ cuenta\ como\n\ una\ palabra\ distinta.\n
+comment4.params=
+comment4.target=int\ findIndexMax()
+comment4.text=\n\ Obtener\ el\ \u00EDndice\ de\ la\ palabra\ m\u00E1s\ frecuente\ obtenida\ anteriormente.\n\ \n\ @return\ \u00CDndice\ de\ la\ palabra\ m\u00E1s\ frecuente.\ -1\ si\ no\ hay\ ninguna\ palabra.\n
+comment5.params=
+comment5.target=void\ tester()
+comment5.text=\n\ Probador\ de\ las\ funciones\ findUnique\ y\ findIndexMax.\n
+numComments=6
