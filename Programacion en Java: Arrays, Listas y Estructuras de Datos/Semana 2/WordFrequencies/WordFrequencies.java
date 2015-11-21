@@ -63,7 +63,10 @@ public class WordFrequencies
             palabra = palabra.toLowerCase();
             
             if (sinSignos)
+            {
                 palabra = eliminarSignos( palabra);
+                if (palabra.isEmpty()) continue;
+            }
 
             indice = myWords.indexOf( palabra);
                 
