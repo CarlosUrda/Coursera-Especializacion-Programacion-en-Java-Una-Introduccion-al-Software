@@ -43,18 +43,6 @@ public class WordFrequencies
     
     
     /**
-     * Obtener la palabra situada internamente en un índice.
-     * 
-     * @param i Índice donde está situada la palabra
-     * @return Palabra situada en el índice.
-     */
-    public String getWord( int i)
-    {
-        return myWords.get( i);
-    }
-    
-        
-    /**
      * Encontrar las palabras distintas en un archivo y obtener el número de veces que 
      * aparece cada una.
      * 
@@ -66,7 +54,6 @@ public class WordFrequencies
     {
         FileResource archivo = new FileResource();
         int indice;
-        int freq;
         
         myWords.clear();
         myFreqs.clear();
@@ -77,18 +64,16 @@ public class WordFrequencies
             
             if (sinSignos)
                 palabra = eliminarSignos( palabra);
-            
-            if (myWords.contains( palabra))
-            {
-                indice = myWords.indexOf( palabra);
-                freq = myFreqs.get( indice) + 1;
-                myFreqs.set( indice, freq);
-            }
-            else
+
+            indice = myWords.indexOf( palabra);
+                
+            if (indice == -1)
             {
                 myWords.add( palabra);
                 myFreqs.add( 1);
             }
+            else
+                myFreqs.set( indice, myFreqs.get( indice) + 1);
         }
              
     }
