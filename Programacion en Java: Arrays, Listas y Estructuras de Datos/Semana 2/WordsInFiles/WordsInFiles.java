@@ -173,10 +173,11 @@ public class WordsInFiles
         
         int maxNumArchs = maxNumber();
         
-        System.out.println( "Número máximo de archivos es de cualquier palabra: " + maxNumArchs);
+        System.out.println( "Número máximo de archivos de cualquier palabra: " + maxNumArchs);
         
         ArrayList<String> palabras = wordsInNumFiles( maxNumArchs);
       
+        System.out.println( "\n\nTotal palabras que aparecen en tal número de archivos: " + palabras.size());
         System.out.println( "\n\nPalabras que aparecen en tal número de archivos:");
         for (String palabra : palabras)
         {
@@ -193,5 +194,25 @@ public class WordsInFiles
             printFilesIn( palabra);
         }
         
+    }
+
+    /**
+     * Probador de todas las funciones de esta clase
+     * 
+     * @param numArchivos Número de archivos en los que aparecen las palabras a considerar.
+     */
+    public void tester2( int numArchivos)
+    {
+        buildWordFileMap( false);
+        
+        ArrayList<String> palabras = wordsInNumFiles( numArchivos);
+      
+        System.out.println( "\n\nTotal palabras que aparecen en " + numArchivos + " archivos: " + palabras.size());
+        System.out.println( "\n\nPalabras que aparecen en tal número de archivos:");
+        for (String palabra : palabras)
+        {
+            System.out.println( "\nPalabra => " + palabra);
+            printFilesIn( palabra);
+        }        
     }
 }
