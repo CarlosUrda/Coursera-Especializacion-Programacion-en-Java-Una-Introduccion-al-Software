@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.params=
+comment0.target=CharactersInPlay()
+comment0.text=\n\ Constructor\n
+comment1.params=personaje
+comment1.target=void\ update(java.lang.String)
+comment1.text=\n\ Incrementar\ en\ 1\ el\ n\u00FAmero\ de\ veces\ que\ aparece\ un\ personaje.\ Si\ el\ personaje\ no\n\ hab\u00EDa\ aparecido\ antes\ se\ anota\ como\ una\ aparici\u00F3n.\n\ \n\ @param\ personaje\ Persona\ a\ actualizar\ su\ n\u00FAmero\ de\ aparicionesPer.\n
+comment2.params=
+comment2.target=void\ findAllCharacters()
+comment2.text=\n\ Encontrar\ todos\ los\ personajes\ en\ una\ obra,\ obteniendo\ el\ n\u00FAmero\ de\ aparicionesPer\ de\ cada\ uno.\n
+comment3.params=num1\ num2
+comment3.target=void\ charactersWithNumParts(int,\ int)
+comment3.text=\n\ Mostrar\ los\ personajes\ encontrados\ anteriormente\ en\ una\ obra\ cuyo\ n\u00FAmero\ de\ \n\ aparicionesPer\ est\u00E1\ en\ un\ rango.\n\ \n\ @param\ num1\ N\u00FAmero\ m\u00EDnimo\ de\ aparicionesPer.\n\ @param\ num2\ N\u00FAmero\ m\u00E1ximo\ de\ aparicionesPer.\n
+comment4.params=num1\ num2
+comment4.target=void\ tester(int,\ int)
+comment4.text=\n\ Probador\ de\ las\ funciones\ findAllCharacters\ y\ charactersWithNumParts.\n
+numComments=5

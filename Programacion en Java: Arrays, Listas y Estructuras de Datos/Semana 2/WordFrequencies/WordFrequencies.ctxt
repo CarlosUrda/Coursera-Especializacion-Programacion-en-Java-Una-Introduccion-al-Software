@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.params=
+comment0.target=WordFrequencies()
+comment0.text=\n\ Constructor\n
+comment1.params=palabra
+comment1.target=java.lang.String\ eliminarSignos(java.lang.String)
+comment1.text=\n\ Eliminar\ todos\ los\ caracteres\ que\ son\ signos\ de\ puntuaci\u00F3n\ al\ principio\ y\ al\ final.\n\ \n\ @param\ palabra\ Palabra\ a\ eliminar\ sus\ signos\n
+comment2.params=sinSignos
+comment2.target=void\ findUnique(boolean)
+comment2.text=\n\ Encontrar\ las\ palabras\ distintas\ en\ un\ archivo\ y\ obtener\ el\ n\u00FAmero\ de\ veces\ que\ \n\ aparece\ cada\ una.\n\ \n\ @param\ sinSignos\ Indica\ si\ se\ deben\ tener\ en\ cuenta\ los\ signos\ junto\ a\ una\ palabra.\ Si\ es\ true\n\ los\ signos\ se\ extraen\ para\ contar\ la\ palabra.\ Si\ es\ false\ los\ signos\ se\ dejan\ y\ se\ cuenta\ como\n\ una\ palabra\ distinta.\n
+comment3.params=
+comment3.target=int\ findIndexMax()
+comment3.text=\n\ Obtener\ el\ \u00EDndice\ de\ la\ palabra\ m\u00E1s\ frecuente\ obtenida\ anteriormente.\n\ \n\ @return\ \u00CDndice\ de\ la\ palabra\ m\u00E1s\ frecuente.\ -1\ si\ no\ hay\ ninguna\ palabra.\n
+comment4.params=
+comment4.target=void\ tester()
+comment4.text=\n\ Probador\ de\ las\ funciones\ findUnique\ y\ findIndexMax.\n
+numComments=5

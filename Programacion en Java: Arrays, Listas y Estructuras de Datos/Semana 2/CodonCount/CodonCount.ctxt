@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.params=
+comment0.target=CodonCount()
+comment0.text=\n\ Constructor\ \n
+comment1.params=
+comment1.target=int\ getNumberOfUniqueCodons()
+comment1.text=\n\ N\u00FAmero\ de\ codones\ distintos\ obtenidos\ en\ la\ \u00FAltima\ lectura\ realizada\ de\ ADN.\n\ \n\ @return\ N\u00FAmero\ de\ codones\ distintos.\n
+comment2.params=codon
+comment2.target=int\ getCodonFreq(java.lang.String)
+comment2.text=\n\ Obtener\ la\ frecuencia\ de\ un\ cod\u00F3n\ en\ la\ \u00FAltima\ lectura\ realizada\ de\ ADN.\n\ \n\ @param\ codon\ Cod\u00F3n\ a\ obtener\ su\ frecuencia.\n\ @return\ N\u00FAmero\ de\ apariciones\ del\ cod\u00F3n\ en\ la\ \u00FAltima\ lectura.\n
+comment3.params=start\ dna
+comment3.target=void\ buildCodonMap(int,\ java.lang.String)
+comment3.text=\n\ Obtener\ el\ n\u00FAmero\ de\ apariciones\ de\ codones\ en\ una\ secuencia\ de\ ADN\ en\ un\ marco\ de\n\ lectura\ determinado\ (marco\ de\ lectura\ es\ la\ lectura\ de\ la\ secuencia\ de\ codones\ empezando\n\ en\ el\ primer\ (0),\ segundo\ (1)\ o\ tercer\ s\u00EDmbolo\ (2)\ del\ ADN)\n\ \n\ @param\ start\ Posici\u00F3n\ inicial\ del\ marco\ de\ lectura\ de\ secuencia\ de\ codones\ (0,\ 1\ o\ 2).\n\ @param\ dna\ Secuencia\ de\ ADN.\n
+comment4.params=
+comment4.target=java.lang.String\ getMostCommonCodon()
+comment4.text=\n\ Obtener\ el\ primer\ codon\ m\u00E1s\ frecuente\ en\ el\ \u00FAltimo\ marco\ de\ lectura\ analizado.\n\ \n\ @return\ Cod\u00F3n\ m\u00E1s\ frecuente\ obtenido.\n
+comment5.params=start\ end
+comment5.target=void\ printCodonCounts(int,\ int)
+comment5.text=\n\ Imprimir\ todos\ los\ codones\ obtenidos\ cuyas\ frecuencias\ est\u00E1n\ en\ el\ rango\ [start,end]\n\ \n\ @param\ start\ M\u00EDnima\ frecuencia\ para\ mostrar\ un\ cod\u00F3n\n\ @param\ end\ M\u00E1xima\ frecuencia\ para\ mostrar\ un\ cod\u00F3n.\n
+comment6.params=start\ end
+comment6.target=void\ tester(int,\ int)
+comment6.text=\n\ Probador\ de\ las\ funciones\ de\ esta\ clase.\n\ @param\ start\ M\u00EDnima\ frecuencia\ para\ mostrar\ un\ cod\u00F3n\n\ @param\ end\ M\u00E1xima\ frecuencia\ para\ mostrar\ un\ cod\u00F3n.\n
+numComments=7
