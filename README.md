@@ -8,4 +8,4 @@ Los ejercicios están organizados por cursos y semanas dentro de los mismos. Los
 - Programación en Java: Arrays, Listas y Estructuras de Datos.
 
 
-El entorno de desarrollo integrado (IDE) usado es BlueJ.
+El entorno de desarrollo integrado (IDE) usado es BlueJ http://www.bluej.org/
