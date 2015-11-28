@@ -36,7 +36,6 @@ public class LogAnalyzer
              records.add( WebLogParser.parseEntry( linea));         
      }
      
-     
      /**
       * Imprimir todas las entradas de log registradas en este objeto.
       */
