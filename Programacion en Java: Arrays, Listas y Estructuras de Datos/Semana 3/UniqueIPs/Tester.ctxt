@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.params=archivo\ low\ high
+comment0.target=void\ testCountUniqueIPsInRange(java.lang.String,\ int,\ int)
+comment0.text=\n\ Probador\ de\ la\ funci\u00F3n\ countUniqueIPsInRange\ de\ LogAnalyzer.\n\ \n\ @param\ archivo\ Nombre\ del\ archivo\ de\ log.\n\ @param\ low\ Valor\ inferior\ del\ rango\ de\ c\u00F3digos\ de\ estado.\n\ @param\ high\ Valor\ superior\ del\ rango\ de\ c\u00F3digos\ de\ estado.\n
+comment1.params=archivo\ someday
+comment1.target=void\ testUniqueIPVisitsOnDay(java.lang.String,\ java.lang.String)
+comment1.text=\n\ Probador\ de\ la\ funci\u00F3n\ uniqueIPVisitsOnDay\ de\ LogAnalyzer.\n\ \n\ @param\ archivo\ Nombre\ del\ archivo\ de\ log.\n\ @param\ someday\ Fecha\ en\ formato\ "Mmm\ DD"\ (Dec\ 05;\ Apr\ 19;\ Jun\ 22;\ ..)\n
+comment2.params=archivo\ num
+comment2.target=void\ testPrintAllHigherThanNum(java.lang.String,\ int)
+comment2.text=\n\ Probador\ de\ la\ funci\u00F3n\ printAllHigherThanNum\ de\ LogAnalyzer.\n\ \n\ @param\ archivo\ Nombre\ del\ archivo\ de\ log.\n\ @param\ num\ N\u00FAmero\ de\ c\u00F3digo\ de\ estado\ l\u00EDmite\ inferior.\n
+comment3.params=archivo
+comment3.target=void\ testUniqueIP(java.lang.String)
+comment3.text=\n\ Probador\ de\ la\ funci\u00F3n\ countUniqueIPs\ de\ LogAnalyzer.\n\ @param\ archivo\ Nombre\ del\ archivo\ de\ log.\n
+comment4.params=
+comment4.target=void\ testLogEntry()
+comment5.params=archivo
+comment5.target=void\ testLogAnalyzer(java.lang.String)
+comment5.text=\n\ Probador\ de\ la\ funci\u00F3n\ printAll\ de\ LogAnalyzer.\n\ @param\ archivo\ Nombre\ del\ archivo\ de\ log.\n
+numComments=6

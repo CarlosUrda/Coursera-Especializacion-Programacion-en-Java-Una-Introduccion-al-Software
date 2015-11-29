@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.params=
+comment0.target=LogAnalyzer()
+comment0.text=\n\ Constructor\n
+comment1.params=filename
+comment1.target=void\ readFile(java.lang.String)
+comment1.text=\n\ Leer\ todas\ las\ entradas\ de\ un\ archivo\ log\ y\ guardarlas\ internamente.\n\ \n\ @param\ filename\ Archivo\ de\ log.\n
+comment2.params=
+comment2.target=int\ countUniqueIPs()
+comment2.text=\n\ Contar\ el\ n\u00FAmero\ de\ IP's\ distintas\ que\ hay\ registradas\ como\ entradas\ del\ log.\n\ \n\ @return\ N\u00FAmero\ de\ IP's\ distintas.\n
+comment3.params=someday
+comment3.target=java.util.ArrayList\ uniqueIPVisitsOnDay(java.lang.String)
+comment3.text=\n\ Obtener\ una\ lista\ de\ IP's\ sin\ repetir\ que\ aparezcan\ en\ el\ registro\ de\ entradas\ del\ log\n\ y\ cuya\ fecha\ de\ acceso\ sea\ una\ determinada.\n\ \n\ @param\ someday\ Fecha\ en\ formato\ "Mmm\ DD"\ (Dec\ 05;\ Apr\ 19;\ Jun\ 22;\ ..)\n
+comment4.params=low\ high
+comment4.target=int\ countUniqueIPsInRange(int,\ int)
+comment4.text=\n\ Obtener\ el\ n\u00FAmero\ de\ IPs\ distintas\ que\ tienen\ un\ c\u00F3digo\ de\ estado\ dentro\ de\ un\ rango\n\ [low,high]\ incluidos\ los\ extremos.\n\ \n\ @param\ low\ Valor\ inferior\ del\ rango\ de\ c\u00F3digos\ de\ estado.\n\ @param\ high\ Valor\ superior\ del\ rango\ de\ c\u00F3digos\ de\ estado.\n\ @return\ N\u00FAmero\ de\ IP's\ distintas\ con\ c\u00F3digo\ de\ estado\ en\ el\ rango.\n
+comment5.params=num
+comment5.target=void\ printAllHigherThanNum(int)
+comment5.text=\n\ Imprimir\ todas\ las\ entradas\ cuyo\ n\u00FAmero\ de\ estado\ sea\ mayor\ que\ uno\ determinado.\n\ \n\ @param\ num\ N\u00FAmero\ de\ c\u00F3digo\ de\ estado\ l\u00EDmite\ inferior.\n
+comment6.params=
+comment6.target=void\ printAll()
+comment6.text=\n\ Imprimir\ todas\ las\ entradas\ de\ log\ registradas\ en\ este\ objeto.\n
+numComments=7
