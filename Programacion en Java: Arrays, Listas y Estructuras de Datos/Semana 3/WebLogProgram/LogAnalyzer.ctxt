@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.params=
+comment0.target=LogAnalyzer()
+comment0.text=\n\ Constructor\n
+comment1.params=filename
+comment1.target=void\ readFile(java.lang.String)
+comment1.text=\n\ Leer\ todas\ las\ entradas\ de\ un\ archivo\ log\ y\ guardarlas\ internamente.\n\ \n\ @param\ filename\ Archivo\ de\ log.\n
+comment2.params=
+comment2.target=void\ printAll()
+comment2.text=\n\ Imprimir\ todas\ las\ entradas\ de\ log\ registradas\ en\ este\ objeto.\n
+numComments=3
