@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=message\ whichSlice\ totalSlices
+comment0.target=java.lang.String\ sliceString(java.lang.String,\ int,\ int)
+comment0.text=\n\ A\ partir\ de\ una\ cadena\ obtener\ otra\ cadena\ formada\ por\ los\ caracteres\ de\ una\ posici\u00F3n\ concreta\n\ whichSlice\ dentro\ de\ cada\ una\ de\ las\ ventanas\ de\ tama\u00F1o\ totalSlices.\ Obtener\ los\ caracteres\n\ cuya\ posici\u00F3n\ m\u00F3dulo\ totalSlices\ es\ whichSlice.\n\ \n\ @param\ whichSlice\ Posici\u00F3n\ dentro\ de\ la\ ventana\ de\ los\ caracteres\ a\ obtener.\n\ @param\ totalSlices\ Tama\u00F1o\ de\ la\ ventana.\n\ @return\ Cadena\ obtenida\ con\ los\ caracteres\ correctos\ dentro\ de\ cada\ ventana.\n
+comment1.params=encrypted\ klength\ mostCommon
+comment1.target=int[]\ tryKeyLength(java.lang.String,\ int,\ char)
+comment1.text=\n\ Calcular\ la\ clave\ usada\ para\ encriptar\ un\ mensaje.\n\ \n\ @param\ klength\ Longitud\ de\ la\ clave.\n\ @param\ mostCommon\ Letra\ m\u00E1s\ com\u00FAn\ del\ lenguaje\ del\ mensaje.\n\ @return\ Clave\ usada.\n
+comment2.params=longClave\ letraComun
+comment2.target=void\ breakVigenere(int,\ char)
+comment2.text=\n\ Romper\ el\ cifrado\ de\ Vigenere\ realizado\ en\ un\ texto\ de\ un\ archivo,\ mostrando\ por\ pantalla\n\ el\ mensaje\ desencriptado.\n\ \n\ @param\ longClave\ Longitud\ de\ la\ clave\ usada.\n\ @param\ letraComun\ Letra\ m\u00E1s\ com\u00FAn\ del\ idioma\ del\ mensaje\ cifrado.\n
+comment3.params=longClave\ letraComun
+comment3.target=void\ testTryKeyLength(int,\ char)
+comment3.text=\n\ Probador\ del\ m\u00E9todo\ tryKeyLength.\n\ \n\ @param\ longClave\ Longitud\ de\ la\ clave\ usada.\n\ @param\ letraComun\ Letra\ m\u00E1s\ com\u00FAn\ del\ idioma\ del\ mensaje\ cifrado.\n
+numComments=4
