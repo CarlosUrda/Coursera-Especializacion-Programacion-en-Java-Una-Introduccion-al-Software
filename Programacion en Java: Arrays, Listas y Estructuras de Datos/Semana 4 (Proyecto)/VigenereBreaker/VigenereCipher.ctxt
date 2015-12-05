@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=key
+comment0.target=VigenereCipher(int[])
+comment0.text=\n\ Constructor\n\ \n\ @param\ key\ Clave\ a\ usar\ en\ el\ cifrado.\n
+comment1.params=key\ alphabet
+comment1.target=VigenereCipher(int[],\ java.lang.String)
+comment1.text=\n\ Constructor\n\ \n\ @param\ key\ Clave\ a\ usar\ en\ el\ cifrado.\n\ @param\ alphabet\ Alfabeto\ a\ considerar\ en\ el\ cifrado.\n
+comment2.params=input
+comment2.target=java.lang.String\ encrypt(java.lang.String)
+comment3.params=input
+comment3.target=java.lang.String\ decrypt(java.lang.String)
+comment4.params=
+comment4.target=java.lang.String\ toString()
+numComments=5

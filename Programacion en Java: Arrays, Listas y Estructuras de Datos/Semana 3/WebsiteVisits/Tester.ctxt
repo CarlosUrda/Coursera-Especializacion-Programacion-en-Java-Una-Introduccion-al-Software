@@ -32,6 +32,6 @@ comment8.params=archivo\ num
 comment8.target=void\ testPrintAllHigherThanNum(java.lang.String,\ int)
 comment8.text=\n\ Probador\ de\ la\ funci\u00F3n\ printAllHigherThanNum\ de\ LogAnalyzer.\n\ \n\ @param\ archivo\ Nombre\ del\ archivo\ de\ log.\n\ @param\ num\ N\u00FAmero\ de\ c\u00F3digo\ de\ estado\ l\u00EDmite\ inferior.\n
 comment9.params=archivo
-comment9.target=void\ testUniqueIP(java.lang.String)
+comment9.target=void\ testCountUniqueIPs(java.lang.String)
 comment9.text=\n\ Probador\ de\ la\ funci\u00F3n\ countUniqueIPs\ de\ LogAnalyzer.\n\ @param\ archivo\ Nombre\ del\ archivo\ de\ log.\n
 numComments=12

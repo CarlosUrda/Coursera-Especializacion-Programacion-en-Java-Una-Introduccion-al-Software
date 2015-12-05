@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.params=key\ alphabet
+comment0.target=CaesarCipher(int,\ java.lang.String)
+comment0.text=\n\ Constructor\n\ \n\ @param\ key\ Clave\ a\ usar\ en\ el\ cifrado.\n\ @param\ alphabet\ Alfabeto\ a\ usar\ en\ el\ cifrado.\n
+comment1.params=key
+comment1.target=CaesarCipher(int)
+comment1.text=\n\ Constructor\n\ \n\ @param\ key\ Clave\ a\ usar\ en\ el\ cifrado.\n
+comment2.params=
+comment2.target=java.lang.String\ getAlphabet()
+comment2.text=\n\ Obtener\ el\ alfabeto.\n\ \n\ @return\ Alfabeto\ del\ cifrado.\n
+comment3.params=c\ from\ to
+comment3.target=char\ transformLetter(char,\ java.lang.String,\ java.lang.String)
+comment4.params=c
+comment4.target=char\ encryptLetter(char)
+comment5.params=c
+comment5.target=char\ decryptLetter(char)
+comment6.params=input\ from\ to
+comment6.target=java.lang.String\ transform(java.lang.String,\ java.lang.String,\ java.lang.String)
+comment7.params=input
+comment7.target=java.lang.String\ encrypt(java.lang.String)
+comment8.params=input
+comment8.target=java.lang.String\ decrypt(java.lang.String)
+comment9.params=
+comment9.target=java.lang.String\ toString()
+numComments=10

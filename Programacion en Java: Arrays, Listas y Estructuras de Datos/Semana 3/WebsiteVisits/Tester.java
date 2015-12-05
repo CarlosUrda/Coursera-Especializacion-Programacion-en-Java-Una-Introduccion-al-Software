@@ -190,7 +190,7 @@ public class Tester
      * Probador de la función countUniqueIPs de LogAnalyzer.
      * @param archivo Nombre del archivo de log.
      */
-    public void testUniqueIP( String archivo)
+    public void testCountUniqueIPs( String archivo)
     {
         LogAnalyzer logAnalyzer = new LogAnalyzer();
         
