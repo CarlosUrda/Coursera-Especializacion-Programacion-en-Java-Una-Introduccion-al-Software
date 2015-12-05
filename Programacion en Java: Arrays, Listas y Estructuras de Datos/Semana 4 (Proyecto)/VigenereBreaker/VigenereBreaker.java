@@ -1,24 +1,32 @@
 import java.util.*;
 import edu.duke.*;
 import org.apache.commons.lang3.*;
+import java.io.*;
 
 /**
- * Ejercicio 1 y 2 de la Semana 4 del Curso 3.
+ * Ejercicio 1, 2 y 3 de la Semana 4 del Curso 3.
  * Primera parte de VigenereBreaker
  * 
  * @author Carlos A. Gómez Urda
- * @version 1.1
+ * @version 1.2
  */
 public class VigenereBreaker 
 {
-    private HashSet<String> dictionary;
-    
-    private int maxLongClave;         // Máxima longitud de clave a buscar.
-    private int[] ultimaClave;        // Última clave usada.
-    private int mejorPalabrasReales;  // Mejor número de palabras reales encontradas entre los descifrados de distintos tamaños de clave.
-    
-    private String alfabeto = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    
+    private final String alfaDefecto = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    private int maxLongClave;             // Máxima longitud de clave a buscar.
+    private int[] ultimaClave;            // Última clave usada al descifrar un mensaje con un
+                                          // tamaño de clave y un lenguaje determinado.
+    private int[] mejorClaveDicc;         // Mejor clave encontrada entre todos los posibles tamaños
+                                          // para un lenguaje determinado.
+    private int[] mejorClave;             // Mejor clave encontrada entre todos los posibles tamaños
+                                          // para varios lenguajes probados.
+    private String mejorLenguaje;         // Mejor lenguaje encontrado al descifrar un mensaje.
+    private int mejorPalabrasRealesDicc;  // Mejor número de palabras reales encontradas al descifrar 
+                                          // varias veces un mensaje probando con distintos tamaño de 
+                                          // clave en un lenguaje determinado.
+    private int mejorPalabrasReales;      // Mejor número de palabras reales encontradas entre todos 
+                                          // los lenguajes y para todos los tamaños de clave.                                              
+        
     
     /**
      * Constructor
@@ -62,6 +70,7 @@ public class VigenereBreaker
      * Contar el número de palabras de un mensaje que se encuentran dentro de un diccionario.
      * 
      * @param message Mensaje a contar
+     * @param dictionary Diccionario de palabras de un lenguaje.
      */
     private int countWords( String message, HashSet<String> dictionary)
     {
@@ -103,6 +112,40 @@ public class VigenereBreaker
     }
 
 
+    /**
+     * Contar la frecuencia con que aparecen las letras dentro de un diccionario.
+     * 
+     * @param diccionario Diccionario de un lenguaje.
+     * @return Tabla con la frecuencia por cada letra.
+     */
+    private HashMap<Character,Integer> contarLetrasDiccionario( HashSet<String> diccionario)
+    {
+        HashMap<Character,Integer> frecLetras = new HashMap<Character,Integer>();
+        
+        for (String palabra : diccionario)
+        {
+            palabra = palabra.trim();
+            
+            for (char letra : palabra.toCharArray())
+                frecLetras.put( letra, frecLetras.getOrDefault( letra, 0) + 1);
+        }
+        
+        return frecLetras;
+    }
+    
+    
+    /**
+     * Obtener la letra más común que existe en un diccionario de un lenguaje.
+     * 
+     * @param dictionary Diccionario de palabras del lenguaje.
+     * @return Letra más común del lenguaje.
+     */
+    private char mostCommonCharIn( HashSet<String> dictionary)
+    {
+        HashMap<Character,Integer> frecLetras = contarLetrasDiccionario( dictionary);
+        return letraMasFrec( frecLetras);
+    }
+    
     
     /**
      * A partir de una cadena obtener otra cadena formada por los caracteres de una posición concreta
@@ -170,54 +213,62 @@ public class VigenereBreaker
      * 
      * @param encrypted Texto encryptado con cifrado de Vigenere.
      * @param dictionary Diccionario de palabras del lenguaje del texto cifrado.
+     * @param alfa Alfabeto a usar.
      * @return Texto desencriptado.
      */
-    public String breakForLanguage( String encrypted, HashSet<String> dictionary)
-    {
-        HashMap<Character,Integer> frecLetras = contarLetrasDiccionario( dictionary);
-        char letraMasComun = letraMasFrec( frecLetras);
-//         Object[] arrayLetras = frecLetras.keySet().toArray();
-//         Character[] letrasAlfa = Arrays.copyOf( arrayLetras, arrayLetras.length, Character[].class);
-//         String alfa = new String( ArrayUtils.toPrimitive( letrasAlfa));
-        String alfa = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    public String breakForLanguage( String encrypted, HashSet<String> dictionary, String alfa)
+    {        
+        char letraComun = mostCommonCharIn( dictionary);
         
-        mejorPalabrasReales = 0;
-        int mejorLongClave = 0;
+        mejorPalabrasRealesDicc = 0;
         
         for (int longClave = 1; longClave <= maxLongClave; longClave++)
         {
-            String decrypted = breakVigenere( encrypted, longClave, letraMasComun, alfa);
+            String decrypted = breakVigenere( encrypted, longClave, letraComun, alfa);
 
             int palabrasReales = countWords( decrypted, dictionary);
-            if (palabrasReales <= mejorPalabrasReales) continue;
+            if (palabrasReales <= mejorPalabrasRealesDicc) continue;
             
-            mejorPalabrasReales = palabrasReales;
-            mejorLongClave = longClave;
+            mejorPalabrasRealesDicc = palabrasReales;
+            mejorClaveDicc = ultimaClave;
         }
         
-        return breakVigenere( encrypted, mejorLongClave, letraMasComun, alfa);        
+        VigenereCipher vcipher = new VigenereCipher( mejorClaveDicc, alfa);
+        return vcipher.decrypt( encrypted);        
     }
     
     
     /**
-     * Contar el la frecuencia con que aparece una letra en un diccionario.
+     * Romper el cifrado de Vigenere con longitud de clave e idioma desconocido.
      * 
-     * @param diccionario Diccionario de un lenguaje.
-     * @return Tabla con la frecuencia por cada letra.
+     * @param encrypted Texto encryptado con cifrado de Vigenere.
+     * @param languages Diccionarios de varios lenguajes.
      */
-    private HashMap<Character,Integer> contarLetrasDiccionario( HashSet<String> diccionario)
+    public String breakForAllLanguages( String encrypted, HashMap<String,HashSet<String>> languages)
     {
-        HashMap<Character,Integer> frecLetras = new HashMap<Character,Integer>();
+        mejorPalabrasReales = 0;  
+        mejorLenguaje = "";
         
-        for (String palabra : diccionario)
+        for (String language : languages.keySet())
         {
-            palabra = palabra.trim();
+            // Habría que obtener el alfabeto para cada lenguaje y guardarlo en una tabla Hash.
+            // Después una vez probado para todos los lenguajes, al salir del bucle, simplemente
+            // se crearía el objeto VigenereCipher con el alfabeto del mejor lenguaje.
+            //  Object[] arrayLetras = frecLetras.keySet().toArray();
+            //  Character[] letrasAlfa = Arrays.copyOf( arrayLetras, arrayLetras.length, Character[].class);
+            //  String alfa = new String( ArrayUtils.toPrimitive( letrasAlfa));
+            String alfa = alfaDefecto;
+
+            String decrypted = breakForLanguage( encrypted, languages.get( language), alfa);
+            if (mejorPalabrasRealesDicc <= mejorPalabrasReales) continue;
             
-            for (char letra : palabra.toCharArray())
-                frecLetras.put( letra, frecLetras.getOrDefault( letra, 0) + 1);
+            mejorPalabrasReales = mejorPalabrasRealesDicc;
+            mejorLenguaje = language;
+            mejorClave = mejorClaveDicc;
         }
-        
-        return frecLetras;
+
+        VigenereCipher vcipher = new VigenereCipher( mejorClave, alfaDefecto);
+        return vcipher.decrypt( encrypted);        
     }
     
     
@@ -232,7 +283,7 @@ public class VigenereBreaker
         FileResource archivo = new FileResource();
         
         String mensaje = archivo.asString();
-        int[] clave = tryKeyLength( mensaje, longClave, Character.toLowerCase( letraComun), alfabeto);
+        int[] clave = tryKeyLength( mensaje, longClave, Character.toLowerCase( letraComun), alfaDefecto);
         System.out.println( Arrays.toString( clave));
     }
 
@@ -249,26 +300,46 @@ public class VigenereBreaker
         String mensaje = archivo.asString();
         
         System.out.println( "*** Mensaje desencriptado ***");
-        System.out.println( breakVigenere( mensaje, longClave, letraComun, alfabeto));
+        System.out.println( breakVigenere( mensaje, longClave, letraComun, alfaDefecto));
     }    
     
 
     /**
      * Probador de la función breakForLanguage
-     * 
-     * @param longClave Longitud de la clave usada.
-     * @param letraComun Letra más común del idioma del mensaje cifrado.
      */
     public void testBreakForLanguage() 
     {
-        FileResource archivoMen = new FileResource();        
-        String mensaje = archivoMen.asString();                
+        FileResource frMensaje = new FileResource();        
+        String mensaje = frMensaje.asString();                
 
-        FileResource archivoDic = new FileResource();        
+        FileResource frDiccionario = new FileResource();        
         
-        System.out.println( breakForLanguage( mensaje, readDictionary( archivoDic)));
-        System.out.println( ultimaClave.length + " => " + Arrays.toString( ultimaClave));
+        System.out.println( breakForLanguage( mensaje, readDictionary( frDiccionario), alfaDefecto));
+        System.out.println( mejorClaveDicc.length + " => " + Arrays.toString( mejorClaveDicc));
+        System.out.println( "Palabras reales: " + mejorPalabrasRealesDicc);
+    }    
+
+    
+    /**
+     * Probador de la función breakForAllLanguages
+     */
+    public void testBreakForAllLanguages() 
+    {
+        HashMap<String,HashSet<String>> lenguajesDicc = new HashMap<String,HashSet<String>>();
+        DirectoryResource drLenguajes = new DirectoryResource();        
+        
+        for (File fLenguaje : drLenguajes.selectedFiles())
+        {
+            FileResource frLenguaje = new FileResource( fLenguaje);
+            lenguajesDicc.put( fLenguaje.getName(), readDictionary( frLenguaje));
+        }
+        
+        FileResource frMensaje = new FileResource();        
+        String mensaje = frMensaje.asString();                
+        
+        System.out.println( breakForAllLanguages( mensaje, lenguajesDicc));
+        System.out.println( "Mejor Lenguaje: " + mejorLenguaje);
+        System.out.println( "Mejor clave: " + mejorClave.length + " => " + Arrays.toString( mejorClave));
         System.out.println( "Palabras reales: " + mejorPalabrasReales);
     }    
-    
 }
