@@ -214,11 +214,12 @@ public class VigenereBreaker
      * @param encrypted Texto encryptado con cifrado de Vigenere.
      * @param dictionary Diccionario de palabras del lenguaje del texto cifrado.
      * @param alfa Alfabeto a usar.
-     * @return Texto desencriptado.
+     * @return Texto desencriptado. Null si hay algún error.
      */
     public String breakForLanguage( String encrypted, HashSet<String> dictionary, String alfa)
     {        
         char letraComun = mostCommonCharIn( dictionary);
+        String mejorDecrypted = null;
         
         mejorPalabrasRealesDicc = 0;
         
@@ -231,10 +232,10 @@ public class VigenereBreaker
             
             mejorPalabrasRealesDicc = palabrasReales;
             mejorClaveDicc = ultimaClave;
+            mejorDecrypted = decrypted;
         }
         
-        VigenereCipher vcipher = new VigenereCipher( mejorClaveDicc, alfa);
-        return vcipher.decrypt( encrypted);        
+        return mejorDecrypted;
     }
     
     
@@ -243,9 +244,11 @@ public class VigenereBreaker
      * 
      * @param encrypted Texto encryptado con cifrado de Vigenere.
      * @param languages Diccionarios de varios lenguajes.
+     * @return Texto desencriptado. Null si hay algún error.
      */
     public String breakForAllLanguages( String encrypted, HashMap<String,HashSet<String>> languages)
     {
+        String mejorDecrypted = null;
         mejorPalabrasReales = 0;  
         mejorLenguaje = "";
         
@@ -265,10 +268,10 @@ public class VigenereBreaker
             mejorPalabrasReales = mejorPalabrasRealesDicc;
             mejorLenguaje = language;
             mejorClave = mejorClaveDicc;
+            mejorDecrypted = decrypted;
         }
 
-        VigenereCipher vcipher = new VigenereCipher( mejorClave, alfaDefecto);
-        return vcipher.decrypt( encrypted);        
+        return mejorDecrypted;
     }
     
     
